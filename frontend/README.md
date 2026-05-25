@@ -7,7 +7,7 @@ Frontend interface for MOVRS built with React, Vite, and Tailwind CSS.
 
 ## Live Demo
 
-- Production: https://your-vercel-link.vercel.app  
+- Production: https://movrs-ui.vercel.app/
 - GitHub Repository: https://github.com/SabaImran2104/movrs-frontend  
 
 > Replace the Vercel link after deployment.
