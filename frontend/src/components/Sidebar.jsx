@@ -1,63 +1,37 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { HiOutlineHome } from "react-icons/hi";
 import { FiInfo } from "react-icons/fi";
 import { Menu } from "lucide-react";
 
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   const location = useLocation();
-
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const scrollTop = () => {
-    const scrollContainer = document.getElementById("main-scroll-container");
-
-    if (scrollContainer) {
-      scrollContainer.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <>
       {/* MOBILE TOP BAR */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-[60] bg-[#070b14] border-b border-white/5 h-14 flex items-center px-4">
-        <button onClick={() => setMobileOpen(!mobileOpen)}>
+        <button>
           <Menu className="text-white" />
         </button>
 
         <h1 className="ml-3 text-white font-semibold">MOVRS</h1>
       </div>
 
-      {/* BACKDROP */}
-      {mobileOpen && (
-        <div
-          onClick={() => setMobileOpen(false)}
-          className="fixed inset-0 bg-black/60 z-40 md:hidden"
-        />
-      )}
-
       {/* SIDEBAR */}
       <div
         className={`
-          fixed md:relative z-50 top-0 left-0 h-screen
+          fixed md:fixed z-50 top-0 left-0 h-screen
           bg-[#070b14] border-r border-white/5
           flex flex-col justify-between
           transition-all duration-300 overflow-hidden
 
-          ${mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
           ${isCollapsed ? "w-[74px]" : "w-[260px]"}
         `}
       >
         {/* TOP */}
         <div>
           <div className="h-[72px] flex items-center px-4 border-b border-white/5">
-            <div className="w-8 h-8 rounded-full bg-[#22d3ee] flex items-center justify-center shadow-[0_0_28px_rgba(34,211,238,0.55)]">
-              <div className="w-3 h-0.5 bg-white rounded-full rotate-12"></div>
-            </div>
+            <div className="w-8 h-8 rounded-full bg-[#22d3ee] flex items-center justify-center" />
 
             {!isCollapsed && (
               <h1 className="ml-3 text-[14px] font-semibold text-white">
@@ -68,31 +42,23 @@ const Sidebar = () => {
 
           <div className="px-3 py-5 space-y-2">
 
-            <Link
-              to="/"
-              onClick={() => {
-                setMobileOpen(false);
-                scrollTop();
-              }}
-              className={`flex items-center gap-3 h-12 px-4 rounded-xl transition-all
-              ${location.pathname === "/" ? "bg-[#0b1220] text-white" : "text-[#94a3b8] hover:bg-[#0b1220]/60"}`}
+            <a
+              href="/"
+              className={`flex items-center gap-3 h-12 px-4 rounded-xl
+              ${location.pathname === "/" ? "bg-[#0b1220] text-white" : "text-[#94a3b8]"}`}
             >
               <HiOutlineHome />
               {!isCollapsed && <span>Home</span>}
-            </Link>
+            </a>
 
-            <Link
-              to="/about"
-              onClick={() => {
-                setMobileOpen(false);
-                scrollTop();
-              }}
-              className={`flex items-center gap-3 h-12 px-4 rounded-xl transition-all
-              ${location.pathname === "/about" ? "bg-[#0b1220] text-white" : "text-[#94a3b8] hover:bg-[#0b1220]/60"}`}
+            <a
+              href="/about"
+              className={`flex items-center gap-3 h-12 px-4 rounded-xl
+              ${location.pathname === "/about" ? "bg-[#0b1220] text-white" : "text-[#94a3b8]"}`}
             >
               <FiInfo />
               {!isCollapsed && <span>About</span>}
-            </Link>
+            </a>
 
           </div>
         </div>

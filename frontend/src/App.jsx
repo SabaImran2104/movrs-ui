@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
@@ -23,20 +23,29 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
     <BrowserRouter>
-
       <ScrollToTop />
 
       <div className="flex bg-[#020817] text-white min-h-screen overflow-hidden">
 
+        {/* SIDEBAR */}
         <div className="fixed left-0 top-0 z-50 h-screen">
-          <Sidebar />
+          <Sidebar
+            isCollapsed={isCollapsed}
+            setIsCollapsed={setIsCollapsed}
+          />
         </div>
 
+        {/* CONTENT (NOW FULLY RESPONSIVE SHIFT) */}
         <div
           id="main-scroll-container"
-          className="flex-1 overflow-y-auto h-screen ml-[74px] sm:ml-[260px] w-full"
+          className="flex-1 overflow-y-auto h-screen w-full transition-all duration-300"
+          style={{
+            marginLeft: isCollapsed ? "74px" : "260px",
+          }}
         >
           <Routes>
             <Route path="/" element={<Home />} />
