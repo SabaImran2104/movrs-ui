@@ -84,8 +84,7 @@ const Sidebar = () => {
       </div>
 
       {/* BOTTOM TOGGLE ONLY */}
-      <div className="hidden sm:block px-3 sm:px-4 py-5 sm:py-6 border-t border-white/5 text-[#64748b] text-[11px] sm:text-[12px]">
-        
+<div className="px-3 sm:px-4 py-5 sm:py-6 border-t border-white/5 text-[#64748b] text-[11px] sm:text-[12px]">        
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
           className="flex items-center gap-2 hover:text-[#22d3ee] transition-all duration-300"
