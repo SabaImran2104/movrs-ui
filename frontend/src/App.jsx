@@ -5,7 +5,6 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
-/* ✅ SCROLL TO TOP ON PAGE CHANGE */
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -29,13 +28,15 @@ function App() {
 
       <ScrollToTop />
 
-      <div className="flex bg-[#020817] text-white min-h-screen">
+      <div className="flex bg-[#020817] text-white min-h-screen overflow-hidden">
 
-        <Sidebar />
+        <div className="fixed left-0 top-0 z-50 h-screen">
+          <Sidebar />
+        </div>
 
         <div
           id="main-scroll-container"
-          className="flex-1 overflow-y-auto h-screen"
+          className="flex-1 overflow-y-auto h-screen ml-[74px] sm:ml-[260px] w-full"
         >
           <Routes>
             <Route path="/" element={<Home />} />

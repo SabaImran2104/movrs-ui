@@ -1,10 +1,4 @@
-Here is your **fully updated professional README with Vercel + GitHub + Live Demo section added properly**.
 
-Copy this directly:
-
----
-
-````md
 # MOVRS UI Frontend
 
 Frontend interface for MOVRS built with React, Vite, and Tailwind CSS.

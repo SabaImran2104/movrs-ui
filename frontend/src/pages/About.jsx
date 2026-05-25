@@ -45,13 +45,13 @@ const About = () => {
       {/* BACKGROUND SYSTEM */}
       <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-size-[60px_60px] pointer-events-none"></div>
 
-      <div className="absolute -top-30 -right-30 w-125 h-125 bg-cyan-500/5 blur-[180px] rounded-full pointer-events-none"></div>
+      <div className="absolute -top-24 sm:-top-30 -right-24 sm:-right-30 w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-cyan-500/5 blur-[180px] rounded-full pointer-events-none"></div>
 
-      {/* HERO (FIXED) */}
+      {/* HERO */}
       <AboutHero />
 
       {/* INFO CARDS */}
-      <div className="px-7 md:px-10 mt-8 space-y-4">
+      <div className="px-4 sm:px-6 lg:px-10 mt-6 sm:mt-8 space-y-4">
 
         {cards.map((card, index) => (
           <InfoCard
@@ -64,9 +64,9 @@ const About = () => {
       </div>
 
       {/* INDUSTRIES */}
-      <div className="px-7 md:px-10 mt-10">
+      <div className="px-4 sm:px-6 lg:px-10 mt-10">
 
-        <h2 className="text-[20px] md:text-[22px] font-bold mb-6 tracking-[-0.5px] text-white">
+        <h2 className="text-[20px] sm:text-[22px] font-bold mb-6 tracking-[-0.5px] text-white">
           Industries We Enable
         </h2>
 
@@ -85,12 +85,12 @@ const About = () => {
       </div>
 
       {/* COMPANY */}
-      <div className="px-7 md:px-10 mt-12 pb-10">
+      <div className="px-4 sm:px-6 lg:px-10 mt-12 pb-8 sm:pb-10">
 
-        <div className="relative overflow-hidden rounded-[26px] border border-white/5 bg-[#0b1220] p-7 md:p-8">
+        <div className="relative overflow-hidden rounded-[22px] sm:rounded-[26px] border border-white/5 bg-[#0b1220] p-5 sm:p-7 md:p-8">
 
           {/* glow */}
-          <div className="absolute -top-30 -right-30 w-[320px] h-80 bg-cyan-500/10 blur-[160px] rounded-full"></div>
+          <div className="absolute -top-24 sm:-top-30 -right-24 sm:-right-30 w-[240px] sm:w-[320px] h-[240px] sm:h-80 bg-cyan-500/10 blur-[160px] rounded-full"></div>
 
           <div className="relative z-10">
 
@@ -98,26 +98,46 @@ const About = () => {
               Company at a Glance
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
               <div>
-                <h3 className="text-[#22d3ee] text-[20px] font-bold">2020</h3>
-                <p className="text-[#64748b] text-[12px] mt-1">Founded</p>
+                <h3 className="text-[#22d3ee] text-[18px] sm:text-[20px] font-bold break-words">
+                  2020
+                </h3>
+
+                <p className="text-[#64748b] text-[12px] mt-1">
+                  Founded
+                </p>
               </div>
 
               <div>
-                <h3 className="text-[#22d3ee] text-[20px] font-bold">Los Angeles</h3>
-                <p className="text-[#64748b] text-[12px] mt-1">HQ</p>
+                <h3 className="text-[#22d3ee] text-[18px] sm:text-[20px] font-bold break-words">
+                  Los Angeles
+                </h3>
+
+                <p className="text-[#64748b] text-[12px] mt-1">
+                  HQ
+                </p>
               </div>
 
               <div>
-                <h3 className="text-[#22d3ee] text-[20px] font-bold">2–10</h3>
-                <p className="text-[#64748b] text-[12px] mt-1">Team</p>
+                <h3 className="text-[#22d3ee] text-[18px] sm:text-[20px] font-bold break-words">
+                  2–10
+                </h3>
+
+                <p className="text-[#64748b] text-[12px] mt-1">
+                  Team
+                </p>
               </div>
 
               <div>
-                <h3 className="text-[#22d3ee] text-[20px] font-bold">movrs.ai</h3>
-                <p className="text-[#64748b] text-[12px] mt-1">Website</p>
+                <h3 className="text-[#22d3ee] text-[18px] sm:text-[20px] font-bold break-words">
+                  movrs.ai
+                </h3>
+
+                <p className="text-[#64748b] text-[12px] mt-1">
+                  Website
+                </p>
               </div>
 
             </div>

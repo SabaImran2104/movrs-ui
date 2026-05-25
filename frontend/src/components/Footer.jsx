@@ -17,22 +17,22 @@ const Footer = () => {
 
   return (
 
-    <div className="relative mt-20 w-full bg-[#070b14] border-t border-white/5">
+    <div className="relative mt-16 sm:mt-20 w-full bg-[#070b14] border-t border-white/5 overflow-hidden">
 
       {/* subtle glow like sidebar */}
-      <div className="absolute left-0 bottom-0 w-75 h-50 bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+      <div className="absolute left-0 bottom-0 w-[220px] sm:w-[300px] h-[180px] sm:h-[200px] bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none"></div>
 
       {/* content aligned same as main layout */}
-      <div className="px-7 md:px-10 pt-14 pb-10">
+      <div className="px-4 sm:px-6 lg:px-10 pt-10 sm:pt-14 pb-8 sm:pb-10">
 
-        <div className="flex flex-col md:flex-row md:justify-between gap-14">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-12 sm:gap-14">
 
           {/* LEFT SIDE */}
-          <div className="max-w-85">
+          <div className="max-w-full sm:max-w-[340px]">
 
             <div className="flex items-center gap-3 mb-5">
 
-              <div className="w-7 h-7 rounded-full bg-[#22d3ee] flex items-center justify-center shadow-[0_0_25px_rgba(34,211,238,0.55)]">
+              <div className="w-7 h-7 rounded-full bg-[#22d3ee] flex items-center justify-center shadow-[0_0_25px_rgba(34,211,238,0.55)] flex-shrink-0">
                 <div className="w-3 h-0.5 bg-white rounded-full rotate-12"></div>
               </div>
 
@@ -42,7 +42,7 @@ const Footer = () => {
 
             </div>
 
-            <p className="text-[#94a3b8] text-[13px] leading-7">
+            <p className="text-[#94a3b8] text-[13px] sm:text-[14px] leading-6 sm:leading-7">
               Vision models for understanding human movement in real-world environments.
             </p>
 
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex gap-16 md:gap-24">
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-16 md:gap-24">
 
             {/* NAVIGATE */}
             <div>
@@ -130,19 +130,19 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-14 pt-6 border-t border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="mt-12 sm:mt-14 pt-6 border-t border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
-          <p className="text-[#64748b] text-[12px]">
+          <p className="text-[#64748b] text-[11px] sm:text-[12px] leading-6">
             © 2026 MOVRS • Los Angeles, CA • Founded 2020
           </p>
 
-          <div className="flex gap-6">
+          <div className="flex items-center gap-5 sm:gap-6">
 
-            <p className="text-[#64748b] text-[12px] hover:text-[#22d3ee] cursor-pointer transition-all">
+            <p className="text-[#64748b] text-[11px] sm:text-[12px] hover:text-[#22d3ee] cursor-pointer transition-all">
               Privacy
             </p>
 
-            <p className="text-[#64748b] text-[12px] hover:text-[#22d3ee] cursor-pointer transition-all">
+            <p className="text-[#64748b] text-[11px] sm:text-[12px] hover:text-[#22d3ee] cursor-pointer transition-all">
               Terms
             </p>
 
