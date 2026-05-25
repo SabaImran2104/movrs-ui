@@ -1,90 +1,77 @@
+Got it — here is your **clean, professional README (no emojis, recruiter-ready)**:
 
-# MOVRS UI Frontend
+---
 
-Frontend interface for MOVRS built with React, Vite, and Tailwind CSS.
+```md
+# MOVRS UI - Frontend
+
+Modern responsive frontend interface for MOVRS, built with React, Vite, and Tailwind CSS.  
+Designed with a focus on clean UI, smooth navigation, and mobile responsiveness.
 
 ---
 
 ## Live Demo
 
 - Production: https://movrs-ui.vercel.app/
-- GitHub Repository: https://github.com/SabaImran2104/movrs-frontend  
-
-> Replace the Vercel link after deployment.
+- GitHub: https://github.com/SabaImran2104/movrs-ui
 
 ---
 
-## Folder Structure
+## What This Project Does
 
-```bash
-MOVRS-UI/
-│
-└── frontend/
-    │
-    └── src/
-        │
-        ├── assets/
-        │
-        ├── components/
-        │   ├── AboutHero.jsx
-        │   ├── FeatureCard.jsx
-        │   ├── Footer.jsx
-        │   ├── GlassCard.jsx
-        │   ├── HeroSection.jsx
-        │   ├── IndustryCard.jsx
-        │   ├── InfoCard.jsx
-        │   ├── ScrollToTop.jsx
-        │   ├── Sidebar.jsx
-        │   └── StatsBar.jsx
-        │
-        ├── layout/
-        │   └── MainLayout.jsx
-        │
-        ├── pages/
-        │   ├── Home.jsx
-        │   └── About.jsx
-        │
-        ├── App.jsx
-        └── main.jsx
-````
+MOVRS UI is a modern frontend application that demonstrates:
+
+- Human movement intelligence concept
+- SaaS-style landing page UI
+- Responsive sidebar navigation with collapse support
+- Multi-page routing (Home, About)
+- Component-based architecture
 
 ---
 
 ## Tech Stack
 
-* React.js
-* Vite
-* React Router DOM
-* Tailwind CSS
-* Lucide React
-* React Icons
+- React.js
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Lucide React
+- React Icons
 
 ---
 
-## Project Structure Notes
+## Project Structure
 
-* `components/` → Reusable UI components
-* `layout/` → Shared layout structure
-* `pages/` → Route-based pages
-* `assets/` → Static files (images/icons)
+```
+
+MOVRS-UI/
+└── frontend/
+└── src/
+├── components/   Reusable UI components
+├── pages/        Route pages (Home, About)
+├── layout/       Layout structure
+├── assets/       Static files
+├── App.jsx
+└── main.jsx
+
+````
 
 ---
 
 ## Setup Instructions
 
-Install dependencies:
-
+### Install dependencies
 ```bash
 npm install
-```
+````
 
-Start development server:
+### Run development server
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+### Build for production
 
 ```bash
 npm run build
@@ -92,31 +79,43 @@ npm run build
 
 ---
 
-## Deployment
+## Deployment (Vercel)
 
-This project is deployed using **Vercel**.
-
-To deploy manually:
-
-1. Push code to GitHub
+1. Push project to GitHub
 2. Go to [https://vercel.com/new](https://vercel.com/new)
 3. Import repository
-4. Set root directory to:
+4. Set Root Directory to:
 
-   ```
-   frontend
-   ```
-5. Click Deploy
+```
+frontend
+```
+
+5. Deploy
 
 ---
 
-## Project Status
+## Features
 
-Frontend UI is actively being developed with focus on:
+* Fully responsive UI (mobile and desktop)
+* Collapsible sidebar navigation
+* Smooth routing transitions
+* Dark modern UI design
+* Component-based structure
+* Optimized Vite build
 
-* Modern UI/UX design
-* Responsive layout
-* Component-based architecture
-* Smooth navigation experience
+---
 
-```
+## Status
+
+Project is actively being improved with focus on:
+
+* UI/UX refinement
+* Mobile responsiveness
+* Performance optimization
+* Production deployment readiness
+
+---
+
+## Author
+
+Saba Imran
