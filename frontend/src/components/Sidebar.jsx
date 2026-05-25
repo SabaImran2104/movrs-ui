@@ -10,7 +10,9 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
     <>
       {/* MOBILE TOP BAR */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-[60] bg-[#070b14] border-b border-white/5 h-14 flex items-center px-4">
-        <button>
+
+        {/* FIXED BUTTON */}
+        <button onClick={() => setIsCollapsed(!isCollapsed)}>
           <Menu className="text-white" />
         </button>
 
